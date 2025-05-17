@@ -1,0 +1,30 @@
+<header role="banner" id="header" class="global-header">
+    <div id="skip-to-content">
+      <a href="#main-content">Skip to Main Content</a>
+    </div>
+
+    <!-- Site Alerts -->
+    {{#if alerts }}
+      {{#each alerts }}
+        {{> alerts 
+            header=this.header
+            msg=this.msg
+            icon=this.icon
+            url=this.url
+            text=this.text
+        }}
+      {{/each}}
+    {{/if}}
+
+    {{! Utility Header }}
+    {{> utilityHeader }}
+
+    {{! Branding }}
+    {{> branding }}
+    
+    {{! Mobile Controls }}
+    {{> mobileControls }}
+
+    {{! Navigation }}
+    {{> navHeader }}
+</header>

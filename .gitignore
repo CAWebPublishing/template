@@ -1,0 +1,60 @@
+# Development files
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
+node_modules
+private
+
+# the root doesn't need audit, build, public, or src folders
+build
+public
+src
+audit
+
+# lets not save site data
+caweb.json
+
+# plugins can have built, src, private directories.
+!plugins\/**\/build
+!plugins\/**\/private
+!plugins\/**\/src
+
+# large/disallowed file types
+# a CDN should be used for these
+*\.tgz
+*\.hqx
+*\.bin
+*\.exe
+*\.dll
+*\.deb
+*\.dmg
+*\.iso
+*\.img
+*\.msi
+*\.msp
+*\.msm
+*\.mid
+*\.midi
+*\.kar
+*\.mp3
+*\.ogg
+*\.m4a
+*\.ra
+*\.3gpp
+*\.3gp
+*\.mp4
+*\.mpeg
+*\.mpg
+*\.mov
+*\.webm
+*\.flv
+*\.m4v
+*\.mng
+*\.asx
+*\.asf
+*\.wmv
+*\.avi

@@ -1,0 +1,21 @@
+<!-- Branding -->
+<div class="branding border-bottom">
+    <div class="container d-flex flex-row">
+        {{#if logo }}
+        <div class="header-organization-banner">
+            <a href="/">
+                <img src="{{ logo }}" alt="State Template Logo" aria-label="State Template Logo">
+            </a>
+        </div>
+        {{/if}}
+        {{#if google.search  }}
+        {{#ifCond 'search' '!==' htmlWebpackPlugin.options.templateParameters.template }}
+
+            {{> searchForm }}
+                
+        {{/ifCond}}
+        {{/if}}
+        <button class="mobile-control toggle-menu ca-gov-icon-menu fs-2" data-bs-toggle="collapse" data-bs-target=".mobile-controlled" aria-expanded="false" aria-controls="mobile-controls" aria-label="Open the navigation menu">
+        </button>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+{
+    "name": "@caweb/template",
+    "version": "1.0.0-beta.0",
+    "author": "CAWebPublishing",
+    "description": "CAWebPublishing Template",
+    "license": "ISC",
+    "main": "src/index.html",
+    "homepage": "https://github.com/CAWebPublishing/template#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CAWebPublishing/template.git"
+    },
+    "keywords": [
+        "caweb",
+        "cagov",
+        "template"
+    ],
+    "bugs": {
+        "url": "https://github.com/CAWebPublishing/webpack/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "webpack": "webpack",
+        "test": "echo \"Error: run tests from root\" && exit 0",
+        "testa": "node test.js",
+        "build": "webpack build --config ./node_modules/@caweb/webpack/webpack.config.js",
+        "serve:blank": "set NODE_OPTIONS='--template ./patterns/blank.html --search-template ./patterns/search.html' && webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js",
+        "serve": "set NODE_OPTIONS='--template ./patterns/index.html --search-template ./patterns/search.html' && webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js --host danny.com --port 8888"
+    },
+    "dependencies": {
+        "@caweb/framework": "file:../framework/caweb-framework-1.8.0.tgz",
+        "@caweb/icon-library": "file:../icon-library/caweb-icon-library-1.1.0.tgz"
+    }
+}
