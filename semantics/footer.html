@@ -1,22 +1,9 @@
 <footer class="global-footer">
     <div class="container">
       <div class="d-flex">
-        {{#if footer.nav }}
-        <ul class="nav footer-links">
-          <li class="nav-item">
-            <a href="https://www.ca.gov?utm_campaign=state_template_link&amp;utm_medium=footer&amp;utm_source=external" class="nav-link ps-0" title="CA.gov" target="_blank">
-              <span class="ca-gov-logo-svg"></span>
-            </a>
-          </li>
-          {{#each footer.nav }}
-          {{#if this.url }}{{#if this.label }}
-          <li class="nav-item">
-            <a href="{{ this.url }}" class="nav-link">{{ this.label }}</a>
-          </li>
-          {{/if}}{{/if}}
-          {{/each}}
-        </ul>
-        {{/if}}
+          
+        {{> navFooter }}
+
         {{#if social }}
           <ul class="nav social-share-links">
           {{#each social }}

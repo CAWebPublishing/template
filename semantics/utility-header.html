@@ -13,9 +13,9 @@
       </div>
       <p class="official-tag">Official website of the State of California</p>
     </div>
-    {{#if header.utility.links }}
+    {{#if header.utility }}
     <div class="settings-links">
-      {{#each header.utility.links }}
+      {{#each header.utility }}
       {{#if this.url }}{{#if this.label }}
       <a href="{{ this.url }}">{{ this.label }}</a>
       {{/if}}{{/if}}

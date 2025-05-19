@@ -1,9 +1,9 @@
 <!-- Navigation -->
 <div class="navigation border-bottom">
     <div class="container">
-        {{#if nav.header }}
+        {{#if header.nav }}
         <ul class="nav" aria-label="Main navigation">
-            {{#each nav.header }}
+            {{#each header.nav }}
                 {{#if this.sub }}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" data-bs-popper-config='{"placement": "bottom-start", "strategy": "fixed"}'>{{ this.label }}</a>
