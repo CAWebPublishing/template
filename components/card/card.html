@@ -1,0 +1,42 @@
+{{!--
+    This is a simple card component that can be used to display information in a structured format.
+    It includes a title, an image, and a description.
+    The card can be customized with different colors and sizes.
+--}}
+<!-- Card -->
+ <div class="card card-
+    {{~#if this.layout}}{{ this.layout }}{{else}}default{{/if}} 
+    {{~#if this.divi}}{{#ifCond 'blurb' '===' this.divi }} {{ this.divi }} bg-transparent{{/ifCond}}{{/if}}">
+   {{#if this.img }} 
+        {{#ifCond (ifCond this.imgPlacement '===' 'top' ) '||' (not this.imgPlacement ) }}
+        <img class="{{#if this.imgAlignment }}d-block{{{bsAttr 'spacing' this.imgAlignment }}}{{else}}card-img-top{{/if}}" src="{{ this.img }}" alt="Card image size">
+        {{/ifCond}}
+    {{/if}}
+    {{#if this.heading}}
+    <div class="card-header{{bsAttr 'text' this.headingAlignment}}">
+        <h4 class="card-title{{bsAttr 'text' this.headerColor }}">
+        {{~#if this.icon ~}}
+          <span class="ca-gov-icon-{{ this.icon }}"></span>
+        {{~/if~}}
+        {{~ this.heading ~}}
+        </h4>
+        {{#if this.url }}
+        <div class="options">
+            <a href="{{ this.url }}" class="btn btn-light" target="_blank">{{#if this.urlText}}{{ this.urlText }}{{else}}Read More{{/if}}</a>
+        </div>
+        {{/if}}
+    </div>
+    {{/if}}
+    <div class="card-body{{bsAttr 'text' this.contentColor }}">
+        {{#if this.subHeading }}
+        <div class="card-title{{bsAttr 'text' this.subHeadingAlignment }}">{{~ this.subHeading ~}}</div>
+        {{/if}}
+        {{{ this.content }}}
+    </div>
+    {{#if this.img }} 
+        {{#ifCond this.imgPlacement '==' 'bottom'  }} 
+        <img class="{{#if this.imgAlignment }}d-block{{{bsAttr 'spacing' this.imgAlignment }}}{{else}}card-img-bottom{{/if}}" src="{{ this.img }}" alt="Card image size">
+        {{/ifCond}}
+    {{/if}}
+</div>
+<!-- End of Card -->

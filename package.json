@@ -1,6 +1,6 @@
 {
     "name": "@caweb/template",
-    "version": "1.0.0-beta.2",
+    "version": "1.0.0",
     "author": "CAWebPublishing",
     "description": "CAWebPublishing Template",
     "license": "ISC",
@@ -30,10 +30,10 @@
         "serve": "set NODE_OPTIONS='--template ./patterns/index.html --search-template ./patterns/search.html' && webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js --host danny.com --port 8888"
     },
     "dependencies": {
-        "@caweb/framework": "^1.8.0-beta.1",
+        "@caweb/framework": "^1.8.0",
         "@caweb/icon-library": "^1.1.0"
     },
     "devDependencies": {
-        "@caweb/webpack": "^1.4.0-beta.3"
+        "@caweb/webpack": "^1.4.2"
     }
 }

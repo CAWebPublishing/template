@@ -1,0 +1,28 @@
+{
+    "card":{
+        "heading": "string",
+        "headingColor": "string",
+        "headingAlignment": "string",
+        "subHeading": "string",
+        "subHeadingColor": "string",
+        "subHeadingAlignment": "string",
+        "content": "string",
+        "contentColor": "string",
+        "contentAlignment": "string",
+        "icon": "string",
+        "layout": [
+            "none",
+            "default",
+            "overstated",
+            "understated",
+            "standout", 
+            "standout-highlight"
+        ],
+        "img": "string",
+        "imgPlacement": "string",
+        "imgAlignment": "string",
+        "url": "string",
+        "urlText": "string",
+        "divi": "string"
+    }
+}
