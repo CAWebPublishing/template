@@ -1,3 +1,6 @@
+v1.0.1
+- Fixed issue with alerts component
+
 v1.0.0
 - Removed templating out of @caweb/html-webpack-plugin and into it's own individual package
 - Updated nav.header and utility.links references
