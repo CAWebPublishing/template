@@ -6,7 +6,7 @@
 <!-- Card -->
  <div class="card card-
     {{~#if this.layout}}{{ this.layout }}{{else}}default{{/if}} 
-    {{~#if this.divi}}{{#ifCond 'blurb' '===' this.divi }} {{ this.divi }} bg-transparent{{/ifCond}}{{/if}}">
+    {{#if this.class}} {{ this.class }}{{/if}}">
    {{#if this.img }} 
         {{#ifCond (ifCond this.imgPlacement '===' 'top' ) '||' (not this.imgPlacement ) }}
         <img class="{{#if this.imgAlignment }}d-block{{{bsAttr 'spacing' this.imgAlignment }}}{{else}}card-img-top{{/if}}" src="{{ this.img }}" alt="Card image size">
@@ -29,7 +29,7 @@
     {{/if}}
     <div class="card-body{{bsAttr 'text' this.contentColor }}">
         {{#if this.subHeading }}
-        <div class="card-title{{bsAttr 'text' this.subHeadingAlignment }}">{{~ this.subHeading ~}}</div>
+        <div class="card-title{{bsAttr 'text' this.subHeadingAlignment }}"{{#if this.url }} data-url="{{this.url}}"{{/if}}>{{~ this.subHeading ~}}</div>
         {{/if}}
         {{{ this.content }}}
     </div>
