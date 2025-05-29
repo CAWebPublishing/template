@@ -1,3 +1,6 @@
+v1.0.2
+- Removed divi reference
+
 v1.0.1
 - Fixed issue with alerts component
 
