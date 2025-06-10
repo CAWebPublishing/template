@@ -29,7 +29,7 @@
     {{/if}}
     <div class="card-body{{bsAttr 'text' this.contentColor }}">
         {{#if this.subHeading }}
-        <div class="card-title{{bsAttr 'text' this.subHeadingAlignment }}"{{#if this.url }} data-url="{{this.url}}"{{/if}}>{{~ this.subHeading ~}}</div>
+        <h5 class="card-title{{bsAttr 'text' this.subHeadingAlignment }}"{{#if this.url }} data-url="{{this.url}}"{{/if}}>{{~ this.subHeading ~}}</h5>
         {{/if}}
         {{{ this.content }}}
     </div>
