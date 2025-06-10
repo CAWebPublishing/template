@@ -1,3 +1,6 @@
+v1.0.3
+- Card component card-title element changed from div to H5
+
 v1.0.2
 - Removed divi reference
 
