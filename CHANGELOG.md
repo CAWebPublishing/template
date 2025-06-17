@@ -1,3 +1,6 @@
+v1.0.5
+-  Fixed issue with search.html
+
 v1.0.4
 - Updated logo.png so that it uses a .png instead of .webp
 - Updated content/index.html to provide instructions

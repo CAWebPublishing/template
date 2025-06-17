@@ -4,16 +4,16 @@
     <title>{{ title }}</title>
     {{#if scheme }}
       <!-- Icon Font Library -->
-      <link rel="stylesheet" href="node_modules/@caweb/html-webpack-plugin/build/font-only.css" />
+      <link rel="stylesheet" href="node_modules/@caweb/icon-library/build/font-only.css" />
 
       <!-- Template Scheme CSS -->
-      <link rel="stylesheet" href="node_modules/@caweb/html-webpack-plugin/build/{{ scheme }}.css" />
+      <link rel="stylesheet" href="node_modules/@caweb/framework/build/{{ scheme }}.css" />
     {{/if}}
 
 
-    {{#if htmlWebpackPlugin.options.meta }}
-    {{#each htmlWebpackPlugin.options.meta }}
-    <meta name="{{ @key }}" content="{{ this }}">
+    {{#if meta }}
+    {{#each meta }}
+      <meta name="{{ @key }}" content="{{ this }}" />
     {{/each}}
     {{/if}}
 
