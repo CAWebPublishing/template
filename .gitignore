@@ -13,7 +13,7 @@ private
 build
 public
 src
-audit
+audits
 
 # lets not save site data
 caweb.json
