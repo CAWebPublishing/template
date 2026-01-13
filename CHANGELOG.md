@@ -1,3 +1,10 @@
+v1.0.10
+- Fixed issue with utility links not rendering
+- Alert component alert level tag changed from h6 to span
+- Alert component message taken out of div
+- Updated github workflow
+- Updated peer dependencies
+
 v1.0.9
 - Updated npm packages
 
