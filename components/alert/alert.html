@@ -9,18 +9,16 @@
         <div class="alert alert-primary alert-dismissible">
             <div class="container">
                 {{#if this.header }}
-                <h6 class="alert-level" >
+                <span class="alert-level" >
                     {{#if this.icon }}
                     <span class="ca-gov-icon-{{ this.icon }}"></span>
                     {{/if}}
                     {{ this.header }}
-                </h6>
+                </span>
                 {{/if}}
 
                 {{#if this.msg }}
-                <div>
                     {{ this.msg }}
-                </div>
                 {{/if}}
                 {{#if this.url }}
 				<a href="{{ this.url }}" target="_blank" class="alert-link btn btn-outline-dark btn-sm">{{ this.text }}</a>

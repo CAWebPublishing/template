@@ -1,6 +1,6 @@
 {
     "name": "@caweb/template",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "author": "CAWebPublishing",
     "description": "CAWebPublishing Template",
     "license": "ISC",
@@ -22,18 +22,31 @@
         "access": "public"
     },
     "scripts": {
-        "webpack": "webpack",
+        "caweb": "caweb",
         "test": "echo \"Error: run tests from root\" && exit 0",
-        "testa": "node test.js",
-        "build": "webpack build --config ./node_modules/@caweb/webpack/webpack.config.js",
-        "serve:blank": "set NODE_OPTIONS='--template ./patterns/blank.html --search-template ./patterns/search.html' && webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js",
-        "serve": "set NODE_OPTIONS='--template ./patterns/index.html --search-template ./patterns/search.html' && webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js --host danny.com --port 8888"
-    },
-    "peerDependencies": {
-        "@caweb/framework": "^1.8.6",
-        "@caweb/icon-library": "^1.1.3"
+        "build": "caweb build",
+        "serve": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html",
+        "serve:blank": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/blank.html --search-template ./patterns/search.html",
+        "serve:audit": "caweb serve --template ./patterns/index.html --search-template ./patterns/search.html",
+        "serve:scheme:none": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme false",
+        "serve:scheme:delta": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme delta",
+        "serve:scheme:eureka": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme eureka",
+        "serve:scheme:mono": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme mono",
+        "serve:scheme:oceanside": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme oceanside",
+        "serve:scheme:orangecounty": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme orangecounty",
+        "serve:scheme:pasorobles": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme pasorobles",
+        "serve:scheme:sacramento": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme sacramento",
+        "serve:scheme:santabarbara": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme santabarbara",
+        "serve:scheme:santacruz": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme santacruz",
+        "serve:scheme:shasta": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme shasta",
+        "serve:scheme:sierra": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme sierra",
+        "serve:scheme:trinity": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme trinity"
     },
     "devDependencies": {
-        "@caweb/webpack": "^1.5.10"
+        "@caweb/cli": "^1.15.9"
+    },
+    "peerDependencies": {
+        "@caweb/framework": "^1.9.0",
+        "@caweb/icon-library": "^1.1.4"
     }
 }
