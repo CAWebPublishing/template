@@ -1,15 +1,22 @@
 {
     "name": "@caweb/template",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "author": "CAWebPublishing",
     "description": "CAWebPublishing Template",
     "license": "ISC",
-    "main": "src/index.html",
     "homepage": "https://github.com/CAWebPublishing/template#readme",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/CAWebPublishing/template.git"
     },
+    "files": [
+        "components",
+        "content",
+        "forms",
+        "media",
+        "patterns",
+        "semantics"
+    ],
     "keywords": [
         "caweb",
         "cagov",
@@ -22,31 +29,28 @@
         "access": "public"
     },
     "scripts": {
-        "caweb": "caweb",
+        "webpack": "webpack",
         "test": "echo \"Error: run tests from root\" && exit 0",
-        "build": "caweb build",
-        "serve": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html",
-        "serve:blank": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/blank.html --search-template ./patterns/search.html",
-        "serve:audit": "caweb serve --template ./patterns/index.html --search-template ./patterns/search.html",
-        "serve:scheme:none": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme false",
-        "serve:scheme:delta": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme delta",
-        "serve:scheme:eureka": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme eureka",
-        "serve:scheme:mono": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme mono",
-        "serve:scheme:oceanside": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme oceanside",
-        "serve:scheme:orangecounty": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme orangecounty",
-        "serve:scheme:pasorobles": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme pasorobles",
-        "serve:scheme:sacramento": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme sacramento",
-        "serve:scheme:santabarbara": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme santabarbara",
-        "serve:scheme:santacruz": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme santacruz",
-        "serve:scheme:shasta": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme shasta",
-        "serve:scheme:sierra": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme sierra",
-        "serve:scheme:trinity": "caweb serve --no-jshint --no-audit --no-a11y --template ./patterns/index.html --search-template ./patterns/search.html --scheme trinity"
+        "serve": "webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js ./node_modules/@caweb/webpack/tests/webpack.tests.js --merge",
+        "serve:blank": "set NODE_OPTIONS='--template ./patterns/blank.html --search-template ./patterns/search.html' && npm run serve",
+        "serve:delta": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme delta' && npm run serve",
+        "serve:eureka": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme eureka' && npm run serve",
+        "serve:mono": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme mono' && npm run serve",
+        "serve:oceanside": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme oceanside' && npm run serve",
+        "serve:orangecounty": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme orangecounty' && npm run serve",
+        "serve:pasorobles": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme pasorobles' && npm run serve",
+        "serve:sacramento": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme sacramento' && npm run serve",
+        "serve:santabarbara": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme santabarbara' && npm run serve",
+        "serve:santacruz": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme santacruz' && npm run serve",
+        "serve:shasta": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme shasta' && npm run serve",
+        "serve:sierra": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme sierra' && npm run serve",
+        "serve:trinity": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme trinity' && npm run serve"
     },
     "devDependencies": {
-        "@caweb/cli": "^1.15.9"
-    },
-    "peerDependencies": {
         "@caweb/framework": "^1.9.0",
         "@caweb/icon-library": "^1.1.4"
+    },
+    "dependencies": {
+        "@caweb/webpack": "^1.6.0"
     }
 }

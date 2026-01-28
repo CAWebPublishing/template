@@ -1,10 +1,10 @@
 # CAWebPublishing Template
 This is the CAWebPublishing Template built with [handlebars](https://handlebarsjs.com/) and used by the CAWebPublishing Servce for static site generation.
 
-## Using npm to start the website locally  
+## Using npm to test the website locally  
 
 ``` npm run install ```  
-This command will install all the necessary npm packages to your local website directory.  
+This command will install all the necessary npm packages to test your markup.  
 
 ---
 

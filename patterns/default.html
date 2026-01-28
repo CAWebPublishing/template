@@ -35,10 +35,10 @@
           <div id="main-content" class="main-content" tabindex="-1">
             <main class="main-primary">
 
-              {{#if htmlWebpackPlugin.options.templateParameters.bodyHtmlSnippet }}
-              {{{ htmlWebpackPlugin.options.templateParameters.bodyHtmlSnippet }}}
+              {{#if partial }}
+                {{{ partial }}}
               {{else}}
-              {{> index }}
+                {{> index }}
               {{/if}}
 
             </main>
