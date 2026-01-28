@@ -1,3 +1,6 @@
+v1.0.12
+- Updated npm packages
+
 v1.0.11
 - patterns/index.html renamed to patterns/default.html
 - bodyHtmlSnippet no longer use, renamed to partial
