@@ -1,3 +1,6 @@
+v1.0.13
+- Updated npm packages
+
 v1.0.12
 - Updated npm packages
 
