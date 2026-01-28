@@ -15,14 +15,6 @@ public
 src
 audits
 
-# lets not save site data
-caweb.json
-
-# plugins can have built, src, private directories.
-!plugins\/**\/build
-!plugins\/**\/private
-!plugins\/**\/src
-
 # large/disallowed file types
 # a CDN should be used for these
 *\.tgz

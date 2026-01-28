@@ -19,3 +19,6 @@ node_modules
 *.sql
 *.tar.gz
 *.zip
+
+# no need to distribute site data
+caweb.json

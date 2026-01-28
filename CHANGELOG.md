@@ -1,3 +1,7 @@
+v1.0.11
+- patterns/index.html renamed to patterns/default.html
+- bodyHtmlSnippet no longer use, renamed to partial
+
 v1.0.10
 - Fixed issue with utility links not rendering
 - Alert component alert level tag changed from h6 to span
