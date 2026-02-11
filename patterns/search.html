@@ -2,28 +2,7 @@
 <html lang="en">
   <head>
     <title>{{ title }}</title>
-    {{#if scheme }}
-      <!-- Icon Font Library -->
-      <link rel="stylesheet" href="node_modules/@caweb/icon-library/build/font-only.css" />
-
-      <!-- Template Scheme CSS -->
-      <link rel="stylesheet" href="node_modules/@caweb/framework/build/{{ scheme }}.css" />
-    {{/if}}
-
-
-    {{#if meta }}
-    {{#each meta }}
-      <meta name="{{ @key }}" content="{{ this }}" />
-    {{/each}}
-    {{/if}}
-
-    {{#if assets }}
-    {{#each assets }}
-    {{#if (endsWith this ".css") }}
-    <link rel="stylesheet" href="{{ this }}" />
-    {{/if}}
-    {{/each}}
-    {{/if}}
+    {{> head}}
   </head>
   <body class="page-template-searchpage">
       {{> header  }}

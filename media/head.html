@@ -1,0 +1,59 @@
+{{#if scheme }}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Icon Font Library -->
+<link rel="stylesheet" href="/node_modules/@caweb/icon-library/build/font-only.css" />
+
+<!-- Template Scheme CSS -->
+<link rel="stylesheet" href="/node_modules/@caweb/framework/build/{{ scheme }}.css" />
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="100x100"
+  href="/media/apple-touch-icon-precomposed.png" />
+<link rel="icon" sizes="192x192" href="/media/apple-touch-icon-192x192.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="180x180"
+  href="/media/apple-touch-icon-180x180.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="152x152"
+  href="/media/apple-touch-icon-152x152.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/media/apple-touch-icon-144x144.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="120x120"
+  href="/media/apple-touch-icon-120x120.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="/media/apple-touch-icon-114x114.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="72x72"
+  href="/media/apple-touch-icon-72x72.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  href="/media/apple-touch-icon-57x57.png" />
+<link rel="shortcut icon" href="/media/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" href="/media/apple-touch-icon.png" />
+{{/if}}
+      
+{{#if meta }}
+{{#each meta }}
+  <meta name="{{ @key }}" content="{{ this }}" />
+{{/each}}
+{{/if}}
+
+{{#if assets }}
+{{#each assets }}
+{{#if (endsWith this ".css") }}
+  <link rel="stylesheet" href="{{ this }}" />
+{{/if}}
+{{/each}}
+{{/if}}

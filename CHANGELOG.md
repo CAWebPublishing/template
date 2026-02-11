@@ -1,3 +1,9 @@
+v1.0.14
+- Added apple touch icons
+- Added Google preconnects
+- Added new head semantics file
+- Fixed issue with search form appearing on serp page
+
 v1.0.13
 - Updated npm packages
 
