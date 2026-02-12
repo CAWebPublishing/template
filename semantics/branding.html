@@ -9,7 +9,7 @@
         </div>
         {{/if}}
         {{#if google.search  }}
-        {{#ifCond 'search.html' '!==' (replace htmlWebpackPlugin.options.template '.*(search.html)$' '$1' ) }}
+        {{#ifCond 'serp.html' '!==' (replace htmlWebpackPlugin.options.template '.*(serp.html)$' '$1' ) }}
             {{> searchForm }}
         {{/ifCond}}
         {{/if}}

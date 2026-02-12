@@ -1,3 +1,9 @@
+v1.0.15
+- Added new 404 pattern
+- Renamed search pattern to serpt
+- Updated content/index.html
+- Updated search references
+
 v1.0.14
 - Added apple touch icons
 - Added Google preconnects
