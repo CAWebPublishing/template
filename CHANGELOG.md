@@ -1,3 +1,7 @@
+v1.0.17
+- Updated template references in head, default and serp patterns
+- Updated npm packages
+
 v1.0.16
 - Updated template references in head
 - Updated npm packages
