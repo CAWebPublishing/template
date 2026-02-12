@@ -1,3 +1,7 @@
+v1.0.16
+- Updated template references in head
+- Updated npm packages
+
 v1.0.15
 - Added new 404 pattern
 - Renamed search pattern to serpt

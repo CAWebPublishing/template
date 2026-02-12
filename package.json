@@ -1,6 +1,6 @@
 {
     "name": "@caweb/template",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "author": "CAWebPublishing",
     "description": "CAWebPublishing Template",
     "license": "ISC",
@@ -32,25 +32,25 @@
         "webpack": "webpack",
         "test": "echo \"Error: run tests from root\" && exit 0",
         "serve": "webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js ./node_modules/@caweb/webpack/tests/webpack.tests.js --merge",
-        "serve:blank": "set NODE_OPTIONS='--template ./patterns/blank.html --search-template ./patterns/search.html' && npm run serve",
-        "serve:delta": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme delta' && npm run serve",
-        "serve:eureka": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme eureka' && npm run serve",
-        "serve:mono": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme mono' && npm run serve",
-        "serve:oceanside": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme oceanside' && npm run serve",
-        "serve:orangecounty": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme orangecounty' && npm run serve",
-        "serve:pasorobles": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme pasorobles' && npm run serve",
-        "serve:sacramento": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme sacramento' && npm run serve",
-        "serve:santabarbara": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme santabarbara' && npm run serve",
-        "serve:santacruz": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme santacruz' && npm run serve",
-        "serve:shasta": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme shasta' && npm run serve",
-        "serve:sierra": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme sierra' && npm run serve",
-        "serve:trinity": "set NODE_OPTIONS='--template ./patterns/default.html --search-template ./patterns/search.html --scheme trinity' && npm run serve"
+        "serve:blank": "set NODE_OPTIONS='--template ./patterns/blank.html' && npm run serve",
+        "serve:delta": "set NODE_OPTIONS='--template ./patterns/default.html --scheme delta' && npm run serve",
+        "serve:eureka": "set NODE_OPTIONS='--template ./patterns/default.html --scheme eureka' && npm run serve",
+        "serve:mono": "set NODE_OPTIONS='--template ./patterns/default.html --scheme mono' && npm run serve",
+        "serve:oceanside": "set NODE_OPTIONS='--template ./patterns/default.html --scheme oceanside' && npm run serve",
+        "serve:orangecounty": "set NODE_OPTIONS='--template ./patterns/default.html --scheme orangecounty' && npm run serve",
+        "serve:pasorobles": "set NODE_OPTIONS='--template ./patterns/default.html --scheme pasorobles' && npm run serve",
+        "serve:sacramento": "set NODE_OPTIONS='--template ./patterns/default.html --scheme sacramento' && npm run serve",
+        "serve:santabarbara": "set NODE_OPTIONS='--template ./patterns/default.html --scheme santabarbara' && npm run serve",
+        "serve:santacruz": "set NODE_OPTIONS='--template ./patterns/default.html --scheme santacruz' && npm run serve",
+        "serve:shasta": "set NODE_OPTIONS='--template ./patterns/default.html --scheme shasta' && npm run serve",
+        "serve:sierra": "set NODE_OPTIONS='--template ./patterns/default.html --scheme sierra' && npm run serve",
+        "serve:trinity": "set NODE_OPTIONS='--template ./patterns/default.html --scheme trinity' && npm run serve"
     },
     "devDependencies": {
-        "@caweb/framework": "^1.9.8",
+        "@caweb/framework": "^1.9.9",
         "@caweb/icon-library": "^1.1.7"
     },
     "dependencies": {
-        "@caweb/webpack": "^1.6.6"
+        "@caweb/webpack": "^1.6.7"
     }
 }
