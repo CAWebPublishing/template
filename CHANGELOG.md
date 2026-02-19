@@ -1,3 +1,6 @@
+v1.0.18
+- Added template to 404.html
+
 v1.0.17
 - Updated template references in head, default and serp patterns
 - Updated npm packages

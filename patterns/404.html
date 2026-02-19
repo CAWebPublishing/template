@@ -1,32 +1,63 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>We're sorry, that link didn't work.</h1>
 
-      <p class="lead">To find what you need, you can:</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    {{> head }}
+  </head>
+  
+  <body>
 
+      {{> header }}
 
-    <ul>
-      <li>
-        Browse our
-        <a href="index.html">homepage</a>
-      </li>
-      <li>Double check the link</li>
-      <li>
-        Use our
-        <a href="serp.html?q=">search</a>
-      </li>
-    </ul>
-    <p>
-      Did you get here from a link on our website?
-      <a href="contact.html">Let us know</a>
-      so we can fix it.
-    </p>
-
-    <p class="fs-7">Error: Page not found (404)</p>
-  </div>
-</div>
-</main>
-  </div>
-</div>
-
+      <div id="page-container" class="page-container">
+          <div id="main-content" class="main-content" tabindex="-1">
+            <main class="main-primary">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <h1>We're sorry, that link didn't work.</h1>
+              
+                    <p class="lead">To find what you need, you can:</p>
+              
+              
+                  <ul>
+                    <li>
+                      Browse our
+                      <a href="index.html">homepage</a>
+                    </li>
+                    <li>Double check the link</li>
+                    <li>
+                      Use our
+                      <a href="serp.html?q=">search</a>
+                    </li>
+                  </ul>
+                  <p>
+                    Did you get here from a link on our website?
+                    <a href="contact.html">Let us know</a>
+                    so we can fix it.
+                  </p>
+              
+                  <p class="fs-7">Error: Page not found (404)</p>
+                </div>
+              </div>
+              </main>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+        {{> footer }}
+        {{#if scheme }}
+        <script src="/node_modules/@caweb/framework/build/{{ scheme }}.js"></script>
+        {{/if}}
+        {{#if assets }}
+        {{#each assets }}
+        {{#if (endsWith this ".js") }}
+        <script src="{{ this }}"></script>
+        {{/if}}
+        {{/each}}
+        {{/if}}
+    </body>
+  </html>
+        
