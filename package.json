@@ -1,6 +1,6 @@
 {
     "name": "@caweb/template",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "author": "CAWebPublishing",
     "description": "CAWebPublishing Template",
     "license": "ISC",
@@ -47,10 +47,10 @@
         "serve:trinity": "set NODE_OPTIONS='--template ./patterns/default.html --scheme trinity' && npm run serve"
     },
     "devDependencies": {
-        "@caweb/framework": "^1.9.9",
+        "@caweb/framework": "^1.9.10",
         "@caweb/icon-library": "^1.1.7"
     },
     "dependencies": {
-        "@caweb/webpack": "^1.6.8"
+        "@caweb/webpack": "^1.6.9"
     }
 }
