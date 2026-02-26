@@ -1,6 +1,6 @@
 {
     "name": "@caweb/template",
-    "version": "1.0.18",
+    "version": "1.0.19",
     "author": "CAWebPublishing",
     "description": "CAWebPublishing Template",
     "license": "ISC",
@@ -23,7 +23,7 @@
         "template"
     ],
     "bugs": {
-        "url": "https://github.com/CAWebPublishing/webpack/issues"
+        "url": "https://github.com/CAWebPublishing/template/issues"
     },
     "publishConfig": {
         "access": "public"
@@ -31,26 +31,27 @@
     "scripts": {
         "webpack": "webpack",
         "test": "echo \"Error: run tests from root\" && exit 0",
-        "serve": "webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js ./node_modules/@caweb/webpack/tests/webpack.tests.js --merge",
-        "serve:blank": "set NODE_OPTIONS='--template ./patterns/blank.html' && npm run serve",
-        "serve:delta": "set NODE_OPTIONS='--template ./patterns/default.html --scheme delta' && npm run serve",
-        "serve:eureka": "set NODE_OPTIONS='--template ./patterns/default.html --scheme eureka' && npm run serve",
-        "serve:mono": "set NODE_OPTIONS='--template ./patterns/default.html --scheme mono' && npm run serve",
-        "serve:oceanside": "set NODE_OPTIONS='--template ./patterns/default.html --scheme oceanside' && npm run serve",
-        "serve:orangecounty": "set NODE_OPTIONS='--template ./patterns/default.html --scheme orangecounty' && npm run serve",
-        "serve:pasorobles": "set NODE_OPTIONS='--template ./patterns/default.html --scheme pasorobles' && npm run serve",
-        "serve:sacramento": "set NODE_OPTIONS='--template ./patterns/default.html --scheme sacramento' && npm run serve",
-        "serve:santabarbara": "set NODE_OPTIONS='--template ./patterns/default.html --scheme santabarbara' && npm run serve",
-        "serve:santacruz": "set NODE_OPTIONS='--template ./patterns/default.html --scheme santacruz' && npm run serve",
-        "serve:shasta": "set NODE_OPTIONS='--template ./patterns/default.html --scheme shasta' && npm run serve",
-        "serve:sierra": "set NODE_OPTIONS='--template ./patterns/default.html --scheme sierra' && npm run serve",
-        "serve:trinity": "set NODE_OPTIONS='--template ./patterns/default.html --scheme trinity' && npm run serve"
+        "serve": "node -e \"if (!process.env.CAWEB_NODE_OPTIONS) { console.error('\\x1b[31mDont run serve directly, use one of the serve:* scripts\\x1b[0m');process.exit(1);}\" && webpack serve --config ./node_modules/@caweb/webpack/webpack.config.js ./node_modules/@caweb/webpack/tests/webpack.tests.js --merge",
+        "serve:blank": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/blank.html' npm run serve",
+        "serve:delta": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme delta' npm run serve",
+        "serve:eureka": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme eureka' npm run serve",
+        "serve:mono": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme mono' npm run serve",
+        "serve:oceanside": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme oceanside' npm run serve",
+        "serve:orangecounty": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme orangecounty' npm run serve",
+        "serve:pasorobles": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme pasorobles' npm run serve",
+        "serve:sacramento": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme sacramento' npm run serve",
+        "serve:santabarbara": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme santabarbara' npm run serve",
+        "serve:santacruz": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme santacruz' npm run serve",
+        "serve:shasta": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme shasta' npm run serve",
+        "serve:sierra": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme sierra' npm run serve",
+        "serve:trinity": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme trinity' npm run serve"
     },
     "devDependencies": {
         "@caweb/framework": "^1.9.10",
-        "@caweb/icon-library": "^1.1.7"
+        "@caweb/icon-library": "^1.1.7",
+        "cross-env": "^10.1.0"
     },
     "dependencies": {
-        "@caweb/webpack": "^1.6.9"
+        "@caweb/webpack": "^2.0.0"
     }
 }
