@@ -1,3 +1,7 @@
+v1.0.19
+- Added cross-env to scripts for cross platform compatibility
+- Updated npm packages
+
 v1.0.18
 - Added template to 404.html
 
