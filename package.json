@@ -1,6 +1,6 @@
 {
     "name": "@caweb/template",
-    "version": "1.0.19",
+    "version": "1.1.0",
     "author": "CAWebPublishing",
     "description": "CAWebPublishing Template",
     "license": "ISC",
@@ -47,11 +47,11 @@
         "serve:trinity": "cross-env CAWEB_NODE_OPTIONS='--template ./patterns/default.html --scheme trinity' npm run serve"
     },
     "devDependencies": {
-        "@caweb/framework": "^1.9.10",
+        "@caweb/framework": "^1.9.11",
         "@caweb/icon-library": "^1.1.7",
         "cross-env": "^10.1.0"
     },
-    "dependencies": {
+    "peerDependencies": {
         "@caweb/webpack": "^2.0.0"
     }
 }

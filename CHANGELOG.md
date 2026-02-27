@@ -1,3 +1,7 @@
+v1.1.0
+- @caweb/webpack is now a peerDependency
+- updated npm packages
+
 v1.0.19
 - Added cross-env to scripts for cross platform compatibility
 - Updated npm packages
