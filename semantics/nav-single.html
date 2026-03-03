@@ -1,0 +1,12 @@
+<!-- Navigation -->
+<div class="navigation border-bottom">
+    <div class="container">
+        <ul class="nav" aria-label="Main navigation">
+            {{#each header.nav }}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ this.url }}">{{ this.label }}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
