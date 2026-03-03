@@ -1,1 +1,40 @@
-<!-- this menu is not yet ready -->
+<!-- this menu is not yet ready --><!-- Navigation -->
+<div class="navigation border-bottom">
+    <div class="container">
+        <ul class="nav mega dropdown" aria-label="Main navigation">
+            {{#each header.nav }}
+                {{#if this.sub }}
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" data-bs-popper-config='{"placement": "bottom-start", "strategy": "absolute"}'>{{ this.label }}</a>
+                        <div class="sub-nav">
+                            <ul class="dropdown-menu">
+                            {{#each this.sub }}
+                                <li>
+                                    <a class="dropdown-item nav-link{{#ifCond this.media.align '!==' undefined }} with-media-{{ this.media.align }}{{/ifCond}}" href="{{ this.url }}">
+                                        
+                                        {{#if this.media.icon }}
+                                            <span class="fs-1 ca-gov-icon-{{ this.media.icon }}"></span>
+                                        {{/if}}
+                                        {{#if this.media.img }}
+                                            <img src="{{ this.media.img.src }}" alt="{{ this.media.img.alt }}">
+                                        {{/if}}
+                                        <div>
+                                            <span class="fs-4">{{ this.label }}</span>
+                                            {{#if this.description }}
+                                            <div class="link-description">{{ this.description }}</div>
+                                            {{/if}}
+                                        </div>
+                                    </a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        </div>
+                {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ this.url }}">{{ this.label }}</a>
+                {{/if}}    
+                    </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
