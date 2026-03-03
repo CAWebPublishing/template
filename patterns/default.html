@@ -23,9 +23,9 @@
           </div>
       </div>
       {{> footer }}
-      {{#if scheme }}
+      {{#isScheme scheme }}
       <script src="/node_modules/@caweb/framework/build/{{ scheme }}.js"></script>
-      {{/if}}
+      {{/isScheme}}
       {{#if assets }}
       {{#each assets }}
       {{#if (endsWith this ".js") }}

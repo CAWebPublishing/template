@@ -1,3 +1,6 @@
+v1.1.2
+- Updated to isScheme helper function
+
 v1.1.1
 - Navigation menu structures have been separated out 
 
