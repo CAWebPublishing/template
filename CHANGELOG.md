@@ -1,3 +1,6 @@
+v1.1.1
+- Navigation menu structures have been separated out 
+
 v1.1.0
 - @caweb/webpack is now a peerDependency
 - updated npm packages

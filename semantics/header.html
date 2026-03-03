@@ -26,5 +26,17 @@
     {{> mobileControls }}
 
     {{! Navigation }}
-    {{> navHeader }}
+    {{#if header.nav }}
+      {{#ifCond (ifCond header.menu '===' undefined) '||' (ifCond header.menu '===' 'single' ) }}
+          {{> navSingle }}
+      {{/ifCond}}
+      
+      {{#ifCond (ifCond header.menu '!==' undefined) '&&' (ifCond header.menu '===' 'dropdown' ) }}
+          {{> navDropdown }}
+      {{/ifCond}}
+
+      {{#ifCond (ifCond header.menu '!==' undefined) '&&' (ifCond header.menu '===' 'megadropdown' ) }}
+          {{> navMegaDropdown }}
+      {{/ifCond}}
+    {{/if}}
 </header>
