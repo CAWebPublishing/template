@@ -1,3 +1,7 @@
+v1.1.3
+- Updated npm packages
+- Updated megadropdown markup
+
 v1.1.2
 - Updated to isScheme helper function
 

@@ -1,15 +1,19 @@
 <!-- this menu is not yet ready --><!-- Navigation -->
 <div class="navigation border-bottom">
     <div class="container">
-        <ul class="nav mega dropdown" aria-label="Main navigation">
+        <ul class="nav megadropdown" aria-label="Main navigation">
             {{#each header.nav }}
                 {{#if this.sub }}
-                    <li class="nav-item">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" data-bs-popper-config='{"placement": "bottom-start", "strategy": "absolute"}'>{{ this.label }}</a>
-                        <div class="sub-nav">
-                            <ul class="dropdown-menu">
-                            {{#each this.sub }}
-                                <li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" 
+                            data-bs-toggle="dropdown" href="#" aria-expanded="false" 
+                            data-bs-popper-config='{"placement": "bottom-start", "strategy": "fixed"}'>{{ this.label }}</a>
+                            <div class="dropdown-menu">
+                                <div class="submenu">
+                                    {{#each this.sub }}
+                                    {{#if this.new_row }}
+                                        </div><div class="submenu">
+                                    {{/if}}
                                     <a class="dropdown-item nav-link{{#ifCond this.media.align '!==' undefined }} with-media-{{ this.media.align }}{{/ifCond}}" href="{{ this.url }}">
                                         
                                         {{#if this.media.icon }}
@@ -25,10 +29,9 @@
                                             {{/if}}
                                         </div>
                                     </a>
-                                </li>
                             {{/each}}
-                        </ul>
                         </div>
+                    </div>
                 {{else}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ this.url }}">{{ this.label }}</a>

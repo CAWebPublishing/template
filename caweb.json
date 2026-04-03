@@ -8,7 +8,7 @@
             "utility": {
                 "links": []
             },
-            "menu": "megadropdown",
+            "menu": "dropdown",
             "nav": [
                     {
                         "label": "CAWebPublishing",
